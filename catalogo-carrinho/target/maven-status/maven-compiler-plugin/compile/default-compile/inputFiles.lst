@@ -1,0 +1,11 @@
+C:\Users\Almode1\IdeaProjects\catalogo-carrinho\src\main\java\com\exemplo\dominio\adaptadores\InMemoryEstoqueRepository.java
+C:\Users\Almode1\IdeaProjects\catalogo-carrinho\src\main\java\com\exemplo\dominio\adaptadores\StubEmailService.java
+C:\Users\Almode1\IdeaProjects\catalogo-carrinho\src\main\java\com\exemplo\dominio\Carrinho.java
+C:\Users\Almode1\IdeaProjects\catalogo-carrinho\src\main\java\com\exemplo\dominio\Cupom.java
+C:\Users\Almode1\IdeaProjects\catalogo-carrinho\src\main\java\com\exemplo\dominio\exceptions\CupomExpiradoException.java
+C:\Users\Almode1\IdeaProjects\catalogo-carrinho\src\main\java\com\exemplo\dominio\exceptions\EstoqueInsuficiente.java
+C:\Users\Almode1\IdeaProjects\catalogo-carrinho\src\main\java\com\exemplo\dominio\FreteRegra.java
+C:\Users\Almode1\IdeaProjects\catalogo-carrinho\src\main\java\com\exemplo\dominio\portas\EstoqueRepository.java
+C:\Users\Almode1\IdeaProjects\catalogo-carrinho\src\main\java\com\exemplo\dominio\portas\FreteAPI.java
+C:\Users\Almode1\IdeaProjects\catalogo-carrinho\src\main\java\com\exemplo\dominio\Produto.java
+C:\Users\Almode1\IdeaProjects\catalogo-carrinho\src\main\java\com\exemplo\dominio\PromocaoProgressiva.java
