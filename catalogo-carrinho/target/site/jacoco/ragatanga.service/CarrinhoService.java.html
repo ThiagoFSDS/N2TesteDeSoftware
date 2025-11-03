@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="pt"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>CarrinhoService.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">catalogo-carrinho</a> &gt; <a href="index.source.html" class="el_package">ragatanga.service</a> &gt; <span class="el_source">CarrinhoService.java</span></div><h1>CarrinhoService.java</h1><pre class="source lang-java linenums">package ragatanga.service;
+
+import ragatanga.external.FreteAPI;
+import ragatanga.model.Carrinho;
+import ragatanga.model.Produto;
+import ragatanga.repository.EstoqueRepository;
+
+import java.math.BigDecimal;
+import java.util.HashMap;
+import java.util.Map;
+import java.util.Optional;
+
+public class CarrinhoService {
+    private final EstoqueRepository estoque;
+    private final FreteAPI freteApi;
+    private final PaymentGateway paymentGateway;
+    private final EmailService emailService;
+<span class="nc" id="L18">    private final Map&lt;String, Produto&gt; catalog = new HashMap&lt;&gt;();</span>
+
+    public CarrinhoService(EstoqueRepository estoque, FreteAPI freteApi,
+<span class="nc" id="L21">                           PaymentGateway paymentGateway, EmailService emailService) {</span>
+<span class="nc" id="L22">        this.estoque = estoque;</span>
+<span class="nc" id="L23">        this.freteApi = freteApi;</span>
+<span class="nc" id="L24">        this.paymentGateway = paymentGateway;</span>
+<span class="nc" id="L25">        this.emailService = emailService;</span>
+<span class="nc" id="L26">    }</span>
+
+    public void adicionarProdutoCatalog(Produto p) {
+<span class="nc" id="L29">        catalog.put(p.getSku(), p);</span>
+<span class="nc" id="L30">    }</span>
+
+    /**
+     * Calcula total aplicando:
+     * - soma dos itens
+     * - promoção progressiva simples (5% p/ cada item acima de 1 até 20%)
+     * - cupom simples (ex: CUPOM10 = 10% de desconto)
+     * - frete calculado pela API
+     */
+    public BigDecimal calcularTotal(Carrinho carrinho, Optional&lt;String&gt; cupomOpt, String cep) {
+<span class="nc" id="L40">        BigDecimal soma = BigDecimal.ZERO;</span>
+<span class="nc" id="L41">        double pesoTotal = 0.0; // simplificação</span>
+
+        // Soma dos itens e cálculo do peso
+<span class="nc bnc" id="L44" title="All 2 branches missed.">        for (var e : carrinho.getItems().entrySet()) {</span>
+<span class="nc" id="L45">            Produto p = catalog.get(e.getKey());</span>
+<span class="nc" id="L46">            int qtd = e.getValue();</span>
+<span class="nc" id="L47">            soma = soma.add(p.getPreco().multiply(BigDecimal.valueOf(qtd)));</span>
+<span class="nc" id="L48">            pesoTotal += 0.5 * qtd; // cada item 500g</span>
+<span class="nc" id="L49">        }</span>
+
+        // Promoção progressiva: 5% por unidade adicional (máx. 20%)
+<span class="nc" id="L52">        int totalItems = carrinho.getItems().values().stream().mapToInt(Integer::intValue).sum();</span>
+<span class="nc" id="L53">        double descontoPercent = Math.min(0.20, 0.05 * Math.max(0, totalItems - 1));</span>
+<span class="nc" id="L54">        BigDecimal desconto = soma.multiply(BigDecimal.valueOf(descontoPercent));</span>
+<span class="nc" id="L55">        soma = soma.subtract(desconto);</span>
+
+        // Cupom simples (exemplo: CUPOM10 dá 10% de desconto)
+<span class="nc bnc" id="L58" title="All 4 branches missed.">        if (cupomOpt.isPresent() &amp;&amp; cupomOpt.get().equalsIgnoreCase(&quot;CUPOM10&quot;)) {</span>
+<span class="nc" id="L59">            soma = soma.multiply(BigDecimal.valueOf(0.9));</span>
+        }
+
+        // Frete
+<span class="nc" id="L63">        BigDecimal frete = freteApi.calcularFrete(cep, pesoTotal);</span>
+<span class="nc" id="L64">        soma = soma.add(frete);</span>
+
+        // Retorna o valor final
+<span class="nc" id="L67">        return soma;</span>
+    }
+}
+
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.8.202204050719</span></div></body></html>

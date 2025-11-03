@@ -1,0 +1,16 @@
+ragatanga\model\Carrinho.class
+ragatanga\exception\InsufficientStockException.class
+ragatanga\service\PaymentRequest.class
+ragatanga\exception\CouponExpiredException.class
+ragatanga\external\FreteAPI.class
+ragatanga\external\FakeFreteAPI.class
+ragatanga\service\EmailService.class
+ragatanga\service\PaymentResult.class
+ragatanga\repository\InMemoryEstoqueRepository.class
+ragatanga\service\FakeEmailService.class
+ragatanga\service\PaymentGateway.class
+ragatanga\repository\EstoqueRepository.class
+ragatanga\service\FakePaymentGateway.class
+ragatanga\model\ItemCarrinho.class
+ragatanga\model\Produto.class
+ragatanga\service\CarrinhoService.class

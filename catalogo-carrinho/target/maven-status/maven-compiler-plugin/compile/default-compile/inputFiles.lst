@@ -1,14 +1,14 @@
-C:\Users\Pichau\Desktop\N2- Teste\catalogo-carrinho\src\main\java\ragatanga\exception\CouponExpiredException.java
-C:\Users\Pichau\Desktop\N2- Teste\catalogo-carrinho\src\main\java\ragatanga\exception\InsufficientStockException.java
-C:\Users\Pichau\Desktop\N2- Teste\catalogo-carrinho\src\main\java\ragatanga\external\FakeFreteAPI.java
-C:\Users\Pichau\Desktop\N2- Teste\catalogo-carrinho\src\main\java\ragatanga\external\FreteAPI.java
-C:\Users\Pichau\Desktop\N2- Teste\catalogo-carrinho\src\main\java\ragatanga\model\Carrinho.java
-C:\Users\Pichau\Desktop\N2- Teste\catalogo-carrinho\src\main\java\ragatanga\model\ItemCarrinho.java
-C:\Users\Pichau\Desktop\N2- Teste\catalogo-carrinho\src\main\java\ragatanga\model\Produto.java
-C:\Users\Pichau\Desktop\N2- Teste\catalogo-carrinho\src\main\java\ragatanga\repository\EstoqueRepository.java
-C:\Users\Pichau\Desktop\N2- Teste\catalogo-carrinho\src\main\java\ragatanga\repository\InMemoryEstoqueRepository.java
-C:\Users\Pichau\Desktop\N2- Teste\catalogo-carrinho\src\main\java\ragatanga\service\CarrinhoService.java
-C:\Users\Pichau\Desktop\N2- Teste\catalogo-carrinho\src\main\java\ragatanga\service\EmailService.java
-C:\Users\Pichau\Desktop\N2- Teste\catalogo-carrinho\src\main\java\ragatanga\service\FakeEmailService.java
-C:\Users\Pichau\Desktop\N2- Teste\catalogo-carrinho\src\main\java\ragatanga\service\FakePaymentGateway.java
-C:\Users\Pichau\Desktop\N2- Teste\catalogo-carrinho\src\main\java\ragatanga\service\PaymentGateway.java
+C:\Users\Almode1\IdeaProjects\N2TesteDeSoftware\catalogo-carrinho\src\main\java\ragatanga\exception\CouponExpiredException.java
+C:\Users\Almode1\IdeaProjects\N2TesteDeSoftware\catalogo-carrinho\src\main\java\ragatanga\exception\InsufficientStockException.java
+C:\Users\Almode1\IdeaProjects\N2TesteDeSoftware\catalogo-carrinho\src\main\java\ragatanga\external\FakeFreteAPI.java
+C:\Users\Almode1\IdeaProjects\N2TesteDeSoftware\catalogo-carrinho\src\main\java\ragatanga\external\FreteAPI.java
+C:\Users\Almode1\IdeaProjects\N2TesteDeSoftware\catalogo-carrinho\src\main\java\ragatanga\model\Carrinho.java
+C:\Users\Almode1\IdeaProjects\N2TesteDeSoftware\catalogo-carrinho\src\main\java\ragatanga\model\ItemCarrinho.java
+C:\Users\Almode1\IdeaProjects\N2TesteDeSoftware\catalogo-carrinho\src\main\java\ragatanga\model\Produto.java
+C:\Users\Almode1\IdeaProjects\N2TesteDeSoftware\catalogo-carrinho\src\main\java\ragatanga\repository\EstoqueRepository.java
+C:\Users\Almode1\IdeaProjects\N2TesteDeSoftware\catalogo-carrinho\src\main\java\ragatanga\repository\InMemoryEstoqueRepository.java
+C:\Users\Almode1\IdeaProjects\N2TesteDeSoftware\catalogo-carrinho\src\main\java\ragatanga\service\CarrinhoService.java
+C:\Users\Almode1\IdeaProjects\N2TesteDeSoftware\catalogo-carrinho\src\main\java\ragatanga\service\EmailService.java
+C:\Users\Almode1\IdeaProjects\N2TesteDeSoftware\catalogo-carrinho\src\main\java\ragatanga\service\FakeEmailService.java
+C:\Users\Almode1\IdeaProjects\N2TesteDeSoftware\catalogo-carrinho\src\main\java\ragatanga\service\FakePaymentGateway.java
+C:\Users\Almode1\IdeaProjects\N2TesteDeSoftware\catalogo-carrinho\src\main\java\ragatanga\service\PaymentGateway.java
