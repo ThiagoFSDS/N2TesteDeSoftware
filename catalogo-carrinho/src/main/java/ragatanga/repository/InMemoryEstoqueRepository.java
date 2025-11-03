@@ -9,7 +9,7 @@ import java.util.Map;
 import java.util.Optional;
 
 
-public class InMemoryEstoqueRepository implements EstoqueRepository {
+public class InMemoryEstoqueRepository {
     private final Map<String, Integer> armazenamento = new HashMap<>();
 
 

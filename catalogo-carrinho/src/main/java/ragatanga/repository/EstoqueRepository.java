@@ -1,8 +1,9 @@
-package ragatanga.exception;
+package ragatanga.repository;
 
+import java.util.Optional;
+import ragatanga.exception.InsufficientStockException;
 
-
-
-public class CouponExpiredException extends RuntimeException {
-    public CouponExpiredException(String message) { super(message); }
+public interface EstoqueRepository {
+    Optional<Integer> consultarQuantidade(String sku);
+    void reservar(String sku, int quantidade) throws InsufficientStockException;
 }

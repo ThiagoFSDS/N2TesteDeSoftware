@@ -4,8 +4,6 @@ package ragatanga.service;
 import ragatanga.external.FreteAPI;
 import ragatanga.model.Carrinho;
 import ragatanga.model.Produto;
-import ragatanga.repository.EstoqueRepository;
-import ragatanga.exception.CouponExpiredException;
 
 
 import java.math.BigDecimal;
